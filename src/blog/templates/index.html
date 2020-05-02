@@ -1,13 +1,20 @@
-{% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet"href="{% static  'css/main.css'%}">
-</head>
-<body>
-<p>Kareem Abdelrazik</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static%}
+{% block content %}
+{% for post in posts %}
+<div class="border p-3 mb-3">
+    <img class="img-fluid rounded-circle border m-2" style="width: 70px; height:70px;"
+        src="{% static 'blog/images/ava.png'%}" alt="صورة الناشر">
+    <span class="text-secondary">published by | <a href="#"> {{post.author}}</a></span> in
+    <span class="text-secondary">{{post.post_date|date:'d-m-Y'}}</span>
+
+    <h3><a class="text-danger"  href="{% url 'detail' post.id%}">{{post.title}}</a></h3>
+
+
+    <p>{{post.content|truncatewords:50}}</p>
+    <a class="font-weight-bold" href="{% url 'detail' post.id%}">قراءة المزيد ...</a>
+
+</div>
+
+{% endfor %}{% endblock %}

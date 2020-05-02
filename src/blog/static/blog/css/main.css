@@ -1,0 +1,94 @@
+
+@font-face {
+    font-family: 'Tajawal';
+    src: url('../fonts/Tajawal-Regular.ttf')  format("truetype"),
+         local('Tajawal');
+  }
+
+
+
+html, body{
+    direction: rtl;
+    text-align: right;
+}
+
+body{
+    font-family: 'Tajawal', sans-serif;
+}
+
+
+/*navbar style*/
+
+.dropdown-menu .dropdown-item{
+    text-align: right;
+}
+
+.bg-secondary {
+    background-color: #0c5460!important;
+}
+
+.bg-light {
+    background-color: #0c5460!important;
+    color:red;
+    }
+
+.navbar-light .navbar-nav .nav-link{
+    color: rgba(243, 237, 237, 0.9);
+    font-size:20px;
+
+}
+
+
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active, .navbar-light
+.navbar-nav .nav-link.show, .navbar-light
+.navbar-nav .show>.nav-link {
+color: rgba(243, 237, 237, 0.9);
+
+font-size:20px;
+}
+
+.dropdown-menu.show {
+background-color:#0c5460;
+font-size:20px;
+}
+
+.dropdown-menu.show a {
+color:rgba(243, 237, 237, 0.9);
+
+}
+
+.dropdown-menu.show a:hover{
+color:black;
+
+}
+ .d .mylink {
+    color:rgba(243, 237, 237, 0.9);
+    font-weight: bold;
+}
+
+/*end navbar style*/
+
+
+
+
+/* Start Sidebar */
+.latest-post, .latest-comment{
+    padding: 0 15px;
+    
+}
+.latest-post .latest-post-item, .latest-comment .latest-comment-item{
+    padding: 6px;
+}
+
+.latest-post li:first-child, .latest-comment li:first-child{
+    border-top: 0;
+}
+
+.latest-post li:last-child, .latest-comment li:last-child{
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+/* End Sidebar */
